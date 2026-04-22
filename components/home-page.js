@@ -16,8 +16,6 @@ export default function HomePage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [activeHero, setActiveHero] = useState(0);
-  const [activeStat, setActiveStat] = useState(0);
-  const [activeInnovation, setActiveInnovation] = useState(0);
   const [footerAnimation, setFooterAnimation] = useState(null);
 
   const repeatedMarquee = useMemo(() => Array.from({ length: 3 }), []);
@@ -32,13 +30,8 @@ export default function HomePage() {
       setActiveHero((value) => (value + 1) % heroImages.length);
     }, 4200);
 
-    const statTimer = window.setInterval(() => {
-      setActiveStat((value) => (value + 1) % stats.length);
-    }, 5500);
-
     return () => {
       window.clearInterval(heroTimer);
-      window.clearInterval(statTimer);
     };
   }, []);
 
@@ -100,24 +93,9 @@ export default function HomePage() {
           activeHero={activeHero}
           repeatedMarquee={repeatedMarquee}
         />
-        <AboutSection
-          activeStat={activeStat}
-          stats={stats}
-          arrowIcon={assets.arrowIcon}
-          onPrevStat={() =>
-            setActiveStat((value) => (value - 1 + stats.length) % stats.length)
-          }
-          onNextStat={() =>
-            setActiveStat((value) => (value + 1) % stats.length)
-          }
-        />
+        <AboutSection />
         <ServicesSection />
-        <InnovationSection
-          innovations={innovations}
-          activeInnovation={activeInnovation}
-          sphereArrow={assets.sphereArrow}
-          onSelectInnovation={setActiveInnovation}
-        />
+        <InnovationSection />
         <NewsSection news={news} />
       </main>
 

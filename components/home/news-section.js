@@ -5,7 +5,7 @@ export function NewsSection({ news }) {
     <section className="py-20">
       <div className="w-full px-5 py-8 xl:p-8">
         <h1 className="montserrat-font reveal-on-scroll mx-auto w-full pb-20 text-center text-5xl uppercase lg:w-9/12 lg:text-[80px] xl:text-[90px] 2xl:text-[120px] 3xl:text-[160px]">
-          News
+          Blog
         </h1>
 
         {news.map((item) => (

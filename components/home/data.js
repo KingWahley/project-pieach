@@ -6,52 +6,45 @@ export const heroImages = [
 
 export const stats = [
   {
-    value: "2024",
+    value: "100+",
+    title: "Clients",
     description:
-      "Since 2024, we have been the Research Centre for Human Potential - HUPR, operating at the crossroads of innovation and the performing arts. After 11 years as CRITAC, we have broadened our scope to better address current challenges.",
+      "100+ delighted clients and counting, experiencing the fun side of exceptional architectural solutions.",
   },
   {
-    value: "+ Than 100",
+    value: "5",
+    title: "Design Awards",
     description:
-      "We collaborate with an ecosystem of over 100 industrial, institutional, community, and nonprofit partners. These partnerships support our mission and contribute to creating tangible impact in the performing arts sector.",
+      "Explore our collection of prestigious design awards that highlight our commitment to innovation and excellence in the architectural world.",
   },
   {
-    value: "+ Than 10",
+    value: "250+",
+    title: "Built Projects",
     description:
-      "With expertise and an international reach spanning over 10 countries, we stay at the forefront of innovation while making a significant impact in Canada. Our globally recognized know-how strengthens our global influence.",
-  },
-  {
-    value: "4",
-    description:
-      "Our work's excellence is reflected in these 4 recognitions: Industrial Research Chair in Circus Arts (2012-2022), CCTT (since 2018), Technology Access Centre (since 2024), Possibility Studies Hub (since 2025).",
+      "Our journey has seen visions transmute into enchanting realities, ranging from iconic landmarks to inviting interiors......",
   },
 ];
 
 export const innovations = [
   {
-    title: "Social Innovation",
+    title: "Residential",
     image: "/assets/innovation-social.jpg",
     description:
       "For us, social innovation is a creative and transformative response to complex societal challenges. Through the lens of performing arts, we harness artistic intelligence to imagine possible futures, explore new perspectives, and create solutions rooted in communities. This transdisciplinary approach generates measurable and systemic impacts, driving innovation and promoting sustainable development through the arts.",
   },
   {
-    title: "Technologies",
+    title: "Education",
     image: "/assets/innovation-technologies.jpg",
     description:
       "At HUPR, we see digital technologies as key enablers for the emergence of innovative ideas. We are committed to democratizing their use for creation, education, and forward-thinking innovation, prioritizing ethical, inclusive, and accessible approaches. Recognized as a Technology Access Center, we integrate motion capture, artificial intelligence, and machine learning to tackle challenges in the performing arts sector.",
   },
   {
-    title: "Human Performance",
+    title: "Multiplexes",
     image: "/assets/innovation-human-performance.jpg",
     description:
       "In our context, human performance involves optimizing physical, mental, relational, and creative potential, while placing well-being and health at the core of priorities. This includes injury prevention, enhancing educational approaches, developing confidence and creativity, and promoting physical literacy with a focus on the sustainable development of individuals.",
   },
-  {
-    title: "Design",
-    image: "/assets/innovation-design.jpg",
-    description:
-      "At HUPR, we support the creation of innovative performance equipment and environments that inspire creativity and enhance performance. By combining engineering and design, we develop new solutions and improve existing tools to meet the needs of the performing arts sector. Our approach aims to inspire innovation and strengthen the creative and technical capabilities of artists and designers.",
-  },
+ 
 ];
 
 export const news = [

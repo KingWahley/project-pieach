@@ -1,40 +1,72 @@
 "use client";
 
 import Image from "next/image";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 import { SectionLabel } from "./ui";
 
 const SERVICES = [
   {
-    title: "Applied Research",
+    title: "Strategic Planning",
     color: "#a69385",
     image: "/assets/service-applied-research.jpg",
     description:
-      "We take a transdisciplinary approach to fostering human potential development.",
+      " One of our core values are developing a symbiotic relationship between buildings, people and the environment",
   },
   {
-    title: "Knowledge Transfer",
+    title: "Architecture",
     color: "#a64b52",
     image: "/assets/service-knowledge-transfer.jpg",
     description:
-      "We embed knowledge transfer deeply into our collaborative projects.",
+      "With over 100 built projects spanning more than 20 years",
   },
   {
-    title: "Technical Support",
+    title: "Interior Architecture",
     color: "#7a8f92",
     image: "/assets/service-technical-support.jpg",
     description:
-      "We provide consulting and technical expertise for innovative solutions.",
+      "Our approach to interior design is collaborative and combined with discerning artistry, technique and meticulous attention to detail.",
   },
 ];
 
 export function ServicesSection() {
-  return (
-    <section id="services" className="px-0 py-0">
-      <div className="w-full px-5 py-8 xl:px-8">
-        <SectionLabel>Service offer</SectionLabel>
-      </div>
+  const sectionRef = useRef(null);
 
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    
+    let ctx = gsap.context(() => {
+      const panels = gsap.utils.toArray(".sr-panel");
+      
+      let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top top",
+          end: () => `+=${(panels.length - 1) * 100}%`,
+          pin: true,
+          scrub: true,
+        }
+      });
+
+      panels.forEach((panel, i) => {
+        if (i !== 0) {
+          gsap.set(panel, { yPercent: 100 });
+          tl.to(panel, { yPercent: 0, ease: "none" });
+        }
+      });
+    }, sectionRef);
+
+    return () => ctx.revert(); // Cleanup on unmount
+  }, []);
+
+  return (
+    <section id="services" className="px-0 py-0" ref={sectionRef}>
       <div className="sr-stack">
+        <div className="sr-label">
+          <SectionLabel>OUR SERVICES</SectionLabel>
+        </div>
+
         {SERVICES.map((service, index) => (
           <section
             key={service.title}
@@ -73,18 +105,35 @@ export function ServicesSection() {
       <style jsx>{`
         .sr-stack {
           position: relative;
+          height: 100vh;
+          height: 100svh;
+          overflow: hidden;
+        }
+
+        .sr-label {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          z-index: 10;
+          padding: 2rem 1.25rem 0;
+          pointer-events: none;
         }
 
         .sr-panel {
-          position: sticky;
+          position: absolute;
           top: 0;
+          left: 0;
+          width: 100%;
           height: 100vh;
+          height: 100svh;
           background: var(--sr-bg);
           color: #fff;
           display: flex;
           align-items: center;
           justify-content: center;
           overflow: hidden;
+          will-change: transform;
         }
 
         .sr-grid {
@@ -92,7 +141,9 @@ export function ServicesSection() {
           gap: 2rem;
           width: 100%;
           height: 100vh;
+          height: 100svh;
           padding: 2rem 1.25rem;
+          padding-top: 6rem;
         }
 
         .sr-copy {
@@ -136,11 +187,16 @@ export function ServicesSection() {
         }
 
         @media (min-width: 1025px) {
+          .sr-label {
+            padding: 2rem 2rem 0;
+          }
+
           .sr-grid {
             grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
             align-items: center;
             gap: 3rem;
             padding: 3rem 2rem;
+            padding-top: 7rem;
           }
         }
 
