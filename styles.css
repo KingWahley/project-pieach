@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: sans-serif;
+}
+
+/* Important: natural scroll height */
+main {
+  position: relative;
+}
+
+/* Sticky sections */
+.panel {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 3rem;
+  color: white;
+  background: var(--bg);
+
+  /* KEY: layering */
+  z-index: 0;
+}
+
+/* Stack order (critical) */
+.panel:nth-child(1) { z-index: 1; }
+.panel:nth-child(2) { z-index: 2; }
+.panel:nth-child(3) { z-index: 3; }
+.panel:nth-child(4) { z-index: 4; }
