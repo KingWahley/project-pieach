@@ -28,30 +28,33 @@ export const stats = [
 export const innovations = [
   {
     title: "Luxury Residential",
-    image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=1920&auto=format&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=1920&auto=format&fit=crop",
     description:
       "We design bespoke living spaces that harmonize with their natural surroundings. Our residential portfolio is defined by meticulous craftsmanship, expansive natural light, and an uncompromising dedication to material excellence, creating sanctuaries of profound tranquility and modern elegance.",
   },
   {
     title: "Cultural & Civic",
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1920&auto=format&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1920&auto=format&fit=crop",
     description:
       "Our civic architecture shapes the cultural fabric of modern cities. We create monumental, sustainable public spaces that foster human connection, inspire awe, and stand as timeless testaments to the communities they serve.",
   },
   {
     title: "Commercial Towers",
-    image: "https://images.unsplash.com/photo-1430285561322-780c60461536?q=80&w=1920&auto=format&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1430285561322-780c60461536?q=80&w=1920&auto=format&fit=crop",
     description:
       "Redefining the modern skyline, our commercial structures blend sculptural aesthetics with high-performance engineering. We design dynamic, adaptable workspaces that prioritize ecological sustainability and elevate the corporate human experience.",
   },
- 
 ];
 
 export const news = [
   {
     title: "The Rise of Sustainable Architecture",
     date: "April 2026",
-    image: "https://images.unsplash.com/photo-1518780664697-55e3ad937233?q=80&w=1000&auto=format&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1518780664697-55e3ad937233?q=80&w=1000&auto=format&fit=crop",
     href: "#",
     description:
       "Explore how our avant-garde approach to sustainable materials and passive energy design is setting a new global standard. We are reshaping urban landscapes by creating buildings that are both spectacular in form and carbon-neutral in function.",
@@ -59,15 +62,17 @@ export const news = [
   {
     title: "Minimalism in Modern Residential Design",
     date: "March 2026",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1000&auto=format&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1000&auto=format&fit=crop",
     href: "#",
     description:
-      "Minimalist architecture continues to be the ultimate expression of luxury. Discover the philosophy behind our enduring designs—where clean lines, vast open spaces, and curated natural light converge to foster profound tranquility.",
+      "Minimalist architecture continues to be the ultimate expression of luxury. Discover the philosophy behind our enduring designs where clean lines, vast open spaces, and curated natural light converge to foster profound tranquility.",
   },
   {
     title: "Urban Revival: Transforming Industrial Spaces",
     date: "February 2026",
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1000&auto=format&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1000&auto=format&fit=crop",
     href: "#",
     description:
       "Adaptive reuse is breathing visionary new life into forgotten urban sectors. Delve into our latest award-winning projects that masterfully transform historical industrial frameworks into vibrant, modern cultural hubs and luxury lofts.",
@@ -115,8 +120,5 @@ export const assets = {
   arrowIcon: "/assets/icon-arrow.svg",
   sphereArrow: "/assets/icon-sphere-arrow.svg",
   footerLogo: "/assets/Pieach Logo PNG.png",
-  encLogo: "/assets/logo-enc.png",
   headerLogo: "/assets/Pieach Logo PNG.png",
-  mobileLogo: "/assets/Pieach Logo PNG.png",
-  lottieUrl: "/assets/footer-lottie.json",
 };

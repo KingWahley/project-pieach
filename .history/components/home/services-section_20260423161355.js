@@ -79,7 +79,8 @@ export function ServicesSection() {
             <div className="sr-grid">
               <div className="sr-copy">
                 <div className="sr-meta">
-                  
+                  <span>Service {String(index + 1).padStart(2, "0")}</span>
+                  <span>Pieach Studio</span>
                 </div>
 
                 <h2 className="sr-title">{service.title}</h2>

@@ -1,8 +1,9 @@
+import Image from "next/image";
 import { AnimatedButton } from "./ui";
 
 export function BlogSection({ news }) {
   return (
-    <section className="py-20">
+    <section className="content-section py-20">
       <div className="w-full px-5 py-8 xl:p-8">
         <h1 className="montserrat-font reveal-on-scroll mx-auto w-full pb-20 text-center text-5xl uppercase lg:w-9/12 lg:text-[80px] xl:text-[90px] 2xl:text-[120px] 3xl:text-[160px]">
           Blog
@@ -13,11 +14,13 @@ export function BlogSection({ news }) {
             <hr className="section-rule my-2" />
             <div className="gap-10 py-4 lg:flex">
               <div className="w-full lg:w-6/12 xl:w-3/12">
-                <div className="aspect-[calc(4/2.8)] overflow-hidden">
-                  <img
+                <div className="relative overflow-hidden aspect-[calc(4/2.8)]">
+                  <Image
                     className="h-full w-full object-cover object-top transition-transform duration-700 hover:scale-105"
                     src={item.image}
                     alt={item.title}
+                    fill
+                    sizes="(max-width: 1280px) 100vw, 25vw"
                   />
                 </div>
               </div>

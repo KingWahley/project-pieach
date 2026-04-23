@@ -1,5 +1,8 @@
-import { useState, useEffect } from "react";
-import { stats, assets } from "./data";
+"use client";
+
+import Image from "next/image";
+import { useEffect, useState } from "react";
+import { assets, stats } from "./data";
 
 export function AboutSection() {
   const [activeStat, setActiveStat] = useState(0);
@@ -45,7 +48,7 @@ export function AboutSection() {
                 {stats[activeStat].value}
               </h3>
               {stats[activeStat].title && (
-                <h4 className="mt-2 text-2xl font-semibold opacity-90 uppercase tracking-widest">
+                <h4 className="mt-2 text-2xl font-semibold uppercase tracking-widest opacity-90">
                   {stats[activeStat].title}
                 </h4>
               )}
@@ -76,8 +79,16 @@ export function AboutSection() {
         <div className="w-full pt-20 lg:w-7/12 lg:pt-0 xl:w-8/12 2xl:w-9/12">
           <h3 className="ibm-mono reveal-on-scroll uppercase text-sm">About us</h3>
           <hr className="section-rule my-2" />
-          <h1 className=" reveal-on-scroll py-5 pr-5 text-base leading-relaxed xl:text-lg  ">
-            <span>Established in 1997, PIEACH Limited is a multidisciplinary studio of visionary architects, master planners, and interior designers. With an industry-leading reputation across West Africa, our award-winning firm specializes in crafting bespoke, high-performance environments. From monumental civic landmarks to intimate luxury residences, we blend structural innovation with timeless aesthetic mastery to redefine the spatial experience.</span>
+          <h1 className="reveal-on-scroll py-5 pr-5 text-base leading-relaxed xl:text-lg">
+            <span>
+              Established in 1997, PIEACH Limited is a multidisciplinary studio
+              of visionary architects, master planners, and interior designers.
+              With an industry-leading reputation across West Africa, our
+              award-winning firm specializes in crafting bespoke,
+              high-performance environments. From monumental civic landmarks to
+              intimate luxury residences, we blend structural innovation with
+              timeless aesthetic mastery to redefine the spatial experience.
+            </span>
           </h1>
           <div className="py-4">
             <a
@@ -87,7 +98,7 @@ export function AboutSection() {
               className="btn-square relative inline-block aspect-square h-[124px] w-[124px] cursor-pointer border border-black p-4"
             >
               <div className="btn-square-arrow absolute top-3 right-3 -rotate-45">
-                <img src={assets.arrowIcon} alt="Arrow icon" />
+                <Image src={assets.arrowIcon} alt="Arrow icon" width={24} height={24} />
               </div>
               <div className="flex h-full w-full items-end uppercase text-sm">
                 About us

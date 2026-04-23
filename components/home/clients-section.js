@@ -3,7 +3,7 @@ import { clients } from "./data";
 
 export function ClientsSection() {
   return (
-    <section className="w-full bg-white px-5 py-20 xl:p-8 xl:py-32">
+    <section className="content-section w-full bg-white px-5 py-20 xl:p-8 xl:py-32">
       <SectionLabel>OUR CLIENTS</SectionLabel>
 
       <div className="mx-auto w-full pt-12 xl:w-10/12">

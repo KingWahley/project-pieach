@@ -14,6 +14,16 @@ export function HeroSection({ heroImages, repeatedMarquee, splineBackground }) {
             <div className="title-el flex items-center" key={groupIndex}>
               <h1 className="montserrat-font flex items-center gap-6 text-6xl uppercase text-white lg:gap-12 lg:text-[15vw]">
                 <span>Redefining Space</span>
+                <span className="slider-figure relative inline-block">
+                  <Image
+                    src={heroImages[groupIndex % heroImages.length]}
+                    alt=""
+                    fill
+                    sizes="(max-width: 1024px) 110px, 15vw"
+                    className="object-cover"
+                    priority={groupIndex === 0}
+                  />
+                </span>
                 <span>Through Design</span>
               </h1>
             </div>
@@ -25,7 +35,7 @@ export function HeroSection({ heroImages, repeatedMarquee, splineBackground }) {
         <div className="hero-copy-card hero-panel bg-white">
           <div className="w-full p-8 xl:pt-28">
             <h2 className="ibm-mono reveal-on-scroll text-sm font-normal uppercase tracking-widest">
-              Modern Architecture
+              MArchitecture
             </h2>
             <hr className="section-rule mt-2 mb-8" />
             <p className="reveal-on-scroll text-base leading-relaxed xl:text-xl">

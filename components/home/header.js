@@ -1,34 +1,49 @@
+"use client";
+
+import Image from "next/image";
+import { useEffect, useState } from "react";
 import { AnimatedButton } from "./ui";
 
-export function Header({
-  isMenuOpen,
-  navItems,
-  headerLogo,
-  mobileLogo,
-  onToggleMenu,
-  onCloseMenu,
-}) {
+export function Header({ navItems, headerLogo }) {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+    document.documentElement.style.overflow = isMenuOpen ? "hidden" : "";
+
+    return () => {
+      document.documentElement.style.overflow = "";
+    };
+  }, [isMenuOpen]);
+
+  const onCloseMenu = () => setIsMenuOpen(false);
+  const onToggleMenu = () => setIsMenuOpen((value) => !value);
+
   return (
     <header className="absolute top-0 left-0 right-0 z-30">
       <nav className="flex items-start px-5 py-8 xl:p-8">
         <div className="w-7/12 lg:w-9/12 lg:flex items-center">
           <div className="w-10/12 xl:w-6/12 lg:flex items-center lg:gap-3">
-            <div className="w-6/12 lg:w-4/12 py-5 lg:p-5">
+            <div className="w-6/12 py-5 lg:w-4/12 lg:p-5">
               <a href="#" className="block">
-                <img
-                  className="block w-full h-auto"
+                <Image
+                  className="block h-auto w-full"
                   src={headerLogo}
                   alt="PIEACH logo"
+                  width={320}
+                  height={120}
+                  priority
                 />
               </a>
             </div>
             <div className="inline-block w-full lg:hidden lg:w-4/12">
-              <p className="text-xs text-white">Research Centre for Human Potential</p>
+              <p className="text-xs text-white">
+                Research Centre for Human Potential
+              </p>
             </div>
           </div>
         </div>
 
-        <div className="fixed right-5 z-40 w-5/12 overflow-hidden xl:right-8 lg:w-3/12">
+        <div className="fixed right-5 z-40 w-5/12 overflow-hidden lg:w-3/12 xl:right-8">
           <div className="py-5 lg:p-4">
             <button
               type="button"
@@ -78,13 +93,13 @@ export function Header({
       >
         <div className="relative h-full w-full xl:p-8">
           <div
-            className={`ml-auto h-full w-full rounded-md bg-white px-5 transition-transform duration-300 xl:w-[calc(100%/4+1rem)] lg:px-0 ${
+            className={`ml-auto h-full w-full rounded-md bg-white px-5 transition-transform duration-300 lg:px-0 xl:w-[calc(100%/4+1rem)] ${
               isMenuOpen ? "translate-x-0" : "translate-x-full"
             }`}
             onClick={(event) => event.stopPropagation()}
           >
-            <div className="flex h-full w-full flex-col px-5 pt-32 pb-5 xl:pt-20">
-              <ul className="montserrat-font w-full text-right text-[40px] leading-[60px] font-bold uppercase lg:text-[80px] lg:leading-[110px] xl:text-3xl">
+            <div className="flex h-full w-full flex-col px-5 pb-5 pt-32 xl:pt-20">
+              <ul className="montserrat-font w-full text-right text-[40px] font-bold uppercase leading-[60px] lg:text-[80px] lg:leading-[110px] xl:text-3xl">
                 {navItems.map((item) => (
                   <li key={item.label} className="anim-btn">
                     <a href={item.href} onClick={onCloseMenu}>

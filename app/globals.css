@@ -1,6 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Moderustic:wght@300..800&display=swap");
 @import "tailwindcss";
 
 :root {
@@ -21,7 +18,7 @@ body {
   overflow-x: hidden;
   background: #fff;
   color: var(--PIEACH-black);
-  font-family: "IBM Plex Mono", monospace;
+  font-family: var(--font-ibm-plex-mono), monospace;
 }
 
 a {
@@ -39,15 +36,15 @@ img {
 }
 
 .montserrat-font {
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
 }
 
 .moderustic-font {
-  font-family: "Moderustic", sans-serif;
+  font-family: var(--font-moderustic), sans-serif;
 }
 
 .ibm-mono {
-  font-family: "IBM Plex Mono", monospace;
+  font-family: var(--font-ibm-plex-mono), monospace;
 }
 
 .bg-black-PIEACH {
@@ -81,13 +78,8 @@ img {
   display: grid;
   place-items: center;
   background: var(--PIEACH-black);
-  transition: opacity 0.8s ease, visibility 0.8s ease;
-}
-
-.preloader--hide {
-  opacity: 0;
-  visibility: hidden;
   pointer-events: none;
+  animation: PIEACH-preloader-out 0.8s ease 0.45s forwards;
 }
 
 .preloader__container {
@@ -268,44 +260,25 @@ img {
   transform: translateY(0);
 }
 
-.newsletter-modal {
-  transition: opacity 0.35s ease, visibility 0.35s ease;
-}
-
-.newsletter-modal.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
-
-.newsletter-modal.is-visible {
-  opacity: 1;
-  visibility: visible;
-}
-
-.modal-card input {
-  width: 100%;
-  border: 0;
-  padding: 0.95rem 1rem;
-  background: var(--PIEACH-ultra-light);
-  color: var(--PIEACH-black);
-}
-
-.modal-card input:focus {
-  outline: 1px solid var(--PIEACH-black);
-}
-
-.marquee:hover {
-  animation-play-state: paused;
-}
-
 .hero-panel {
   backdrop-filter: blur(6px);
+}
+
+.content-section {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 1000px;
 }
 
 @keyframes PIEACH-spin {
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes PIEACH-preloader-out {
+  to {
+    opacity: 0;
+    visibility: hidden;
   }
 }
 
@@ -342,8 +315,13 @@ img {
 }
 
 @keyframes pan-blueprint {
-  from { background-position: 0px 0px; }
-  to { background-position: 800px 800px; }
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 800px 800px;
+  }
 }
 
 .animate-pan-blueprint {

@@ -2,7 +2,7 @@ import { AnimatedButton } from "./ui";
 
 export function CtaSection() {
   return (
-    <section className="relative overflow-hidden bg-ultraLightGray py-20 xl:py-32">
+    <section className="content-section relative overflow-hidden bg-ultraLightGray py-20 xl:py-32">
       <div 
         className="absolute inset-0 z-0 opacity-90 animate-pan-blueprint" 
         style={{ backgroundImage: "url('/assets/blueprint_bg.png')" }}
