@@ -10,23 +10,23 @@ const SERVICES = [
   {
     title: "Strategic Planning",
     color: "#a69385",
-    image: "/assets/service-applied-research.jpg",
+    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1920&auto=format&fit=crop",
     description:
-      " One of our core values are developing a symbiotic relationship between buildings, people and the environment",
+      "We orchestrate the harmonious integration of form, function, and environment. Our master planning anticipates future urban dynamics, ensuring resilient and visionary frameworks.",
   },
   {
     title: "Architecture",
     color: "#a64b52",
-    image: "/assets/service-knowledge-transfer.jpg",
+    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1920&auto=format&fit=crop",
     description:
-      "With over 100 built projects spanning more than 20 years",
+      "Our structural philosophy marries avant-garde aesthetics with absolute structural integrity, producing iconic monuments that dictate the skyline and inspire their inhabitants.",
   },
   {
     title: "Interior Architecture",
     color: "#7a8f92",
-    image: "/assets/service-technical-support.jpg",
+    image: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=1920&auto=format&fit=crop",
     description:
-      "Our approach to interior design is collaborative and combined with discerning artistry, technique and meticulous attention to detail.",
+      "A seamless extension of our architectural vision. We curate immersive interior landscapes characterized by bespoke materiality, exquisite detailing, and unparalleled spatial harmony.",
   },
 ];
 

@@ -21,11 +21,6 @@ export function Footer({
           </div>
         </div>
 
-        <div className="flex w-6/12 justify-end lg:w-4/12 xl:w-3/12">
-          <div>
-            <img src={encLogo} alt="National Circus School logo" />
-          </div>
-        </div>
       </div>
 
       
@@ -38,15 +33,7 @@ export function Footer({
         <div className="items-center pt-5 text-sm lg:flex lg:pt-2">
           <div className="w-full lg:w-9/12">
             <p>
-              &copy;PIEACH 2026, all reserved. - Digital experience designed by{" "}
-              <a
-                className="underline"
-                href="https://instynctweb.com/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Instynct web
-              </a>
+              &copy;PIEACH 2026, all reserved.
             </p>
           </div>
           <div className="w-full pt-5 lg:w-3/12 lg:pt-0">

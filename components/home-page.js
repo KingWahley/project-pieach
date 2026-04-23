@@ -15,7 +15,7 @@ import { NewsletterModal } from "./home/newsletter-modal";
 import { ServicesSection } from "./home/services-section";
 import { CtaSection } from "./home/cta-section";
 
-export default function HomePage() {
+export default function HomePage({ children }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
@@ -114,6 +114,7 @@ export default function HomePage() {
         <HeroSection
           heroImages={heroImages}
           repeatedMarquee={repeatedMarquee}
+          splineBackground={children}
         />
         <AboutSection />
         <ServicesSection />

@@ -1,48 +1,48 @@
 export const heroImages = [
-  "/assets/hero-1.jpg",
-  "/assets/hero-2.jpg",
-  "/assets/hero-3.jpg",
+  "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1920&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1920&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=1920&auto=format&fit=crop",
 ];
 
 export const stats = [
   {
     value: "100+",
-    title: "Clients",
+    title: "Global Clients",
     description:
-      "100+ delighted clients and counting, experiencing the fun side of exceptional architectural solutions.",
+      "Partnering with visionaries across the globe to deliver bespoke architectural solutions that transcend traditional boundaries.",
   },
   {
-    value: "5",
+    value: "15",
     title: "Design Awards",
     description:
-      "Explore our collection of prestigious design awards that highlight our commitment to innovation and excellence in the architectural world.",
+      "Our relentless pursuit of spatial perfection and sustainable innovation has been recognized by the world's most prestigious design institutions.",
   },
   {
     value: "250+",
-    title: "Built Projects",
+    title: "Built Masterpieces",
     description:
-      "Our journey has seen visions transmute into enchanting realities, ranging from iconic landmarks to inviting interiors......",
+      "A legacy of transforming ambitious visions into enduring realities, from iconic urban landmarks to tranquil luxury estates.",
   },
 ];
 
 export const innovations = [
   {
-    title: "Residential",
-    image: "/assets/innovation-social.jpg",
+    title: "Luxury Residential",
+    image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=1920&auto=format&fit=crop",
     description:
-      "For us, social innovation is a creative and transformative response to complex societal challenges. Through the lens of performing arts, we harness artistic intelligence to imagine possible futures, explore new perspectives, and create solutions rooted in communities. This transdisciplinary approach generates measurable and systemic impacts, driving innovation and promoting sustainable development through the arts.",
+      "We design bespoke living spaces that harmonize with their natural surroundings. Our residential portfolio is defined by meticulous craftsmanship, expansive natural light, and an uncompromising dedication to material excellence, creating sanctuaries of profound tranquility and modern elegance.",
   },
   {
-    title: "Education",
-    image: "/assets/innovation-technologies.jpg",
+    title: "Cultural & Civic",
+    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1920&auto=format&fit=crop",
     description:
-      "At PIEACH, we see digital technologies as key enablers for the emergence of innovative ideas. We are committed to democratizing their use for creation, education, and forward-thinking innovation, prioritizing ethical, inclusive, and accessible approaches. Recognized as a Technology Access Center, we integrate motion capture, artificial intelligence, and machine learning to tackle challenges in the performing arts sector.",
+      "Our civic architecture shapes the cultural fabric of modern cities. We create monumental, sustainable public spaces that foster human connection, inspire awe, and stand as timeless testaments to the communities they serve.",
   },
   {
-    title: "Multiplexes",
-    image: "/assets/innovation-human-performance.jpg",
+    title: "Commercial Towers",
+    image: "https://images.unsplash.com/photo-1430285561322-780c60461536?q=80&w=1920&auto=format&fit=crop",
     description:
-      "In our context, human performance involves optimizing physical, mental, relational, and creative potential, while placing well-being and health at the core of priorities. This includes injury prevention, enhancing educational approaches, developing confidence and creativity, and promoting physical literacy with a focus on the sustainable development of individuals.",
+      "Redefining the modern skyline, our commercial structures blend sculptural aesthetics with high-performance engineering. We design dynamic, adaptable workspaces that prioritize ecological sustainability and elevate the corporate human experience.",
   },
  
 ];
@@ -50,27 +50,27 @@ export const innovations = [
 export const news = [
   {
     title: "The Rise of Sustainable Architecture",
-    date: "April 2024",
+    date: "April 2026",
     image: "https://images.unsplash.com/photo-1518780664697-55e3ad937233?q=80&w=1000&auto=format&fit=crop",
     href: "#",
     description:
-      "Explore how modern architects are integrating sustainable materials and energy-efficient designs to create buildings that not only look spectacular but also minimize environmental impact. From green roofs to passive solar heating, sustainability is reshaping our urban landscapes.",
+      "Explore how our avant-garde approach to sustainable materials and passive energy design is setting a new global standard. We are reshaping urban landscapes by creating buildings that are both spectacular in form and carbon-neutral in function.",
   },
   {
     title: "Minimalism in Modern Residential Design",
-    date: "March 2024",
-    image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=1000&auto=format&fit=crop",
+    date: "March 2026",
+    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1000&auto=format&fit=crop",
     href: "#",
     description:
-      "Minimalist architecture continues to dominate residential design, emphasizing clean lines, open spaces, and natural light. Discover the principles behind this enduring trend and how it fosters a sense of tranquility and order in the modern home.",
+      "Minimalist architecture continues to be the ultimate expression of luxury. Discover the philosophy behind our enduring designs—where clean lines, vast open spaces, and curated natural light converge to foster profound tranquility.",
   },
   {
     title: "Urban Revival: Transforming Industrial Spaces",
-    date: "February 2024",
+    date: "February 2026",
     image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1000&auto=format&fit=crop",
     href: "#",
     description:
-      "Adaptive reuse is breathing new life into forgotten industrial areas. We take a look at some of the most innovative projects that have successfully transformed old factories and warehouses into vibrant cultural hubs, luxury lofts, and modern workspaces.",
+      "Adaptive reuse is breathing visionary new life into forgotten urban sectors. Delve into our latest award-winning projects that masterfully transform historical industrial frameworks into vibrant, modern cultural hubs and luxury lofts.",
   },
 ];
 

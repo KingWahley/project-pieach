@@ -9,10 +9,10 @@ export function CtaSection() {
       />
       <div className="relative z-10 w-full px-5 py-8 text-center xl:p-8">
         <h1 className="montserrat-font reveal-on-scroll mx-auto w-full pb-8 text-4xl uppercase leading-tight lg:w-9/12 lg:text-[60px] xl:text-[80px] font-bold 2xl:text-[100px]">
-          Ready to build your vision?
+          Begin Your Architectural Journey
         </h1>
         <p className="moderustic-font reveal-on-scroll mx-auto max-w-2xl pb-12 text-lg leading-relaxed">
-          Contact our team of experts today to start discussing your next architectural project. Let's turn your ideas into enchanting realities.
+          Partner with our elite studio to transform your most ambitious visions into enduring realities. Let us engineer your legacy.
         </p>
         <div className="reveal-on-scroll flex justify-center">
           <a href="mailto:contact@pieach.com">

@@ -77,7 +77,7 @@ export function AboutSection() {
           <h3 className="ibm-mono reveal-on-scroll uppercase text-sm">About us</h3>
           <hr className="section-rule my-2" />
           <h1 className=" reveal-on-scroll py-5 pr-5 text-base leading-relaxed xl:text-lg  ">
-            <span>Pieach Limited was established in 1997. We are a 15-person firm of architects, planners, interior designers, and project managers with an industry-leading reputation in Nigeria and the West African sub region Our award-winning practice provides a wide range of services, from full service architectural and interior design for the project planning, restorations, renovations, and additions.</span>
+            <span>Established in 1997, PIEACH Limited is a multidisciplinary studio of visionary architects, master planners, and interior designers. With an industry-leading reputation across West Africa, our award-winning firm specializes in crafting bespoke, high-performance environments. From monumental civic landmarks to intimate luxury residences, we blend structural innovation with timeless aesthetic mastery to redefine the spatial experience.</span>
           </h1>
           <div className="py-4">
             <a
