@@ -5,7 +5,7 @@ export function HeroSection({ heroImages, activeHero, repeatedMarquee }) {
     <section className="relative min-h-screen w-full">
       <div className="h-screen w-full overflow-hidden xl:h-[170vh]">
         <img
-          src={heroImages[0]}
+          src={heroImages[activeHero || 0]}
           alt="Hero background"
           className="h-full w-full object-cover"
         />
@@ -16,11 +16,11 @@ export function HeroSection({ heroImages, activeHero, repeatedMarquee }) {
           {repeatedMarquee.map((_, groupIndex) => (
             <div className="title-el flex items-center" key={groupIndex}>
               <h1 className="montserrat-font flex items-center gap-6 text-6xl uppercase text-white lg:gap-12 lg:text-[15vw]">
-                <span>When Performing Arts</span>
+                <span>Where Architecture</span>
                 <span className="slider-figure inline-block">
                   <img src={heroImages[groupIndex % heroImages.length]} alt="" />
                 </span>
-                <span>Entertain Innovation</span>
+                <span>Meets Innovation</span>
               </h1>
             </div>
           ))}

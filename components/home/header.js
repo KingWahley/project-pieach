@@ -16,13 +16,8 @@ export function Header({
             <div className="w-6/12 lg:w-4/12 py-5 lg:p-5">
               <a href="#" className="block">
                 <img
-                  className="hidden w-full h-auto lg:block"
+                  className="block w-full h-auto"
                   src={headerLogo}
-                  alt="PIEACH logo"
-                />
-                <img
-                  className="block w-full h-auto lg:hidden"
-                  src={mobileLogo}
                   alt="PIEACH logo"
                 />
               </a>
