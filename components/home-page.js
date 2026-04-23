@@ -10,6 +10,7 @@ import { Footer } from "./home/footer";
 import { Header } from "./home/header";
 import { HeroSection } from "./home/hero-section";
 import { InnovationSection } from "./home/innovation-section";
+import { ClientsSection } from "./home/clients-section";
 import { BlogSection } from "./home/blog-section";
 import { NewsletterModal } from "./home/newsletter-modal";
 import { ServicesSection } from "./home/services-section";
@@ -119,6 +120,7 @@ export default function HomePage({ children }) {
         <AboutSection />
         <ServicesSection />
         <InnovationSection />
+        <ClientsSection />
         <BlogSection news={news} />
         <CtaSection />
       </main>

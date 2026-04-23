@@ -74,6 +74,17 @@ export const news = [
   },
 ];
 
+export const clients = [
+  { name: "Apex Development", type: "Commercial" },
+  { name: "Lumina Estates", type: "Residential" },
+  { name: "Global Civic Trust", type: "Civic" },
+  { name: "Vanguard Properties", type: "Commercial" },
+  { name: "Horizon Heritage", type: "Cultural" },
+  { name: "Aura Hospitality", type: "Hospitality" },
+  { name: "Meridian Urban", type: "Urban Planning" },
+  { name: "Zenith Capital", type: "Commercial" },
+];
+
 export const usefulLinks = [
   {
     label: "Publications",
