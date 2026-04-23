@@ -21,9 +21,9 @@ const moderustic = Moderustic({
 });
 
 export const metadata = {
-  title: "PIEACH: Research Centre",
+  title: "PIEACH: Architectural Firm",
   description:
-    "PIEACH - Research Centre for Human Potential conducts applied research projects in the performing arts in collaboration with a broad network of partners.",
+    "PIEACH Limited is a multidisciplinary studio of visionary architects, master planners, and interior designers. With an industry-leading reputation across West Africa.",
 };
 
 export default function RootLayout({ children }) {

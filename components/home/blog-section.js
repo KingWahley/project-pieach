@@ -1,15 +1,15 @@
 import Image from "next/image";
 import { AnimatedButton } from "./ui";
 
-export function BlogSection({ news }) {
+export function BlogSection({ blog }) {
   return (
     <section className="content-section py-20">
       <div className="w-full px-5 py-8 xl:p-8">
-        <h1 className="montserrat-font reveal-on-scroll mx-auto w-full pb-20 text-center text-5xl uppercase lg:w-9/12 lg:text-[80px] xl:text-[90px] 2xl:text-[120px] 3xl:text-[160px]">
+        <h1 className="montserrat-font reveal-on-scroll mx-auto w-full pb-8 text-center text-5xl uppercase lg:w-9/12 lg:text-[60px] xl:text-[80px] 2xl:text-[120px] 3xl:text-[160px]">
           Blog
         </h1>
 
-        {news.map((item) => (
+        {blog.map((item) => (
           <article key={item.title} className="w-full py-4">
             <hr className="section-rule my-2" />
             <div className="gap-10 py-4 lg:flex">

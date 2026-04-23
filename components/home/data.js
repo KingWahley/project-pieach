@@ -15,7 +15,7 @@ export const stats = [
     value: "15",
     title: "Design Awards",
     description:
-      "Our relentless pursuit of spatial perfection and sustainable innovation has been recognized by the world's most prestigious design institutions.",
+      "Our relentless pursuit of spatial perfection and sustainable recentProjects has been recognized by the world's most prestigious design institutions.",
   },
   {
     value: "250+",
@@ -25,7 +25,7 @@ export const stats = [
   },
 ];
 
-export const innovations = [
+export const recentProjectss = [
   {
     title: "Luxury Residential",
     image:
@@ -49,7 +49,7 @@ export const innovations = [
   },
 ];
 
-export const news = [
+export const blog = [
   {
     title: "The Rise of Sustainable Architecture",
     date: "April 2026",
@@ -80,14 +80,30 @@ export const news = [
 ];
 
 export const clients = [
-  { name: "Apex Development", type: "Commercial" },
-  { name: "Lumina Estates", type: "Residential" },
-  { name: "Global Civic Trust", type: "Civic" },
-  { name: "Vanguard Properties", type: "Commercial" },
-  { name: "Horizon Heritage", type: "Cultural" },
-  { name: "Aura Hospitality", type: "Hospitality" },
-  { name: "Meridian Urban", type: "Urban Planning" },
-  { name: "Zenith Capital", type: "Commercial" },
+  {
+    name: "Airtel Nigeria",
+    logo: "/assets/client-logos/1604481877-59-airtel-nigeria-customer-care.jpg",
+  },
+  {
+    name: "Cadwell",
+    logo: "/assets/client-logos/Cadwell-e1696436327724.jpg",
+  },
+  {
+    name: "Chrome Oil Services",
+    logo: "/assets/client-logos/Chrome-Oil-Services.png",
+  },
+  {
+    name: "Ogun State",
+    logo: "/assets/client-logos/ogun-state.png",
+  },
+  {
+    name: "Transcorp Hotels",
+    logo: "/assets/client-logos/Transcorp-Hotels.png",
+  },
+  {
+    name: "UBA",
+    logo: "/assets/client-logos/UBA.png",
+  },
 ];
 
 export const usefulLinks = [

@@ -1,12 +1,12 @@
 import { AboutSection } from "./home/about-section";
-import { assets, heroImages, navItems, news } from "./home/data";
+import { assets, heroImages, navItems, blog } from "./home/data";
 import { BlogSection } from "./home/blog-section";
 import { ClientsSection } from "./home/clients-section";
 import { CtaSection } from "./home/cta-section";
 import { Footer } from "./home/footer";
 import { Header } from "./home/header";
 import { HeroSection } from "./home/hero-section";
-import { InnovationSection } from "./home/innovation-section";
+import { recentProjectsSection } from "./home/recentProjects-section";
 import { RevealObserver } from "./home/reveal-observer";
 import { ServicesSection } from "./home/services-section";
 import { SmoothScroll } from "./home/smooth-scroll";
@@ -32,9 +32,9 @@ export default function HomePage() {
         />
         <AboutSection />
         <ServicesSection />
-        <InnovationSection />
+        <recentProjectsSection />
         <ClientsSection />
-        <BlogSection news={news} />
+        <BlogSection blog={blog} />
         <CtaSection />
       </main>
 

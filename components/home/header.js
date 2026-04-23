@@ -35,11 +35,7 @@ export function Header({ navItems, headerLogo }) {
                 />
               </a>
             </div>
-            <div className="inline-block w-full lg:hidden lg:w-4/12">
-              <p className="text-xs text-white">
-                Research Centre for Human Potential
-              </p>
-            </div>
+            
           </div>
         </div>
 
