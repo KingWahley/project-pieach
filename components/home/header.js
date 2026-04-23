@@ -13,17 +13,17 @@ export function Header({
       <nav className="flex items-start px-5 py-8 xl:p-8">
         <div className="w-7/12 lg:w-9/12 lg:flex items-center">
           <div className="w-10/12 xl:w-6/12 lg:flex items-center lg:gap-3">
-            <div className="w-10/12 lg:w-11/12 py-5 lg:p-5">
+            <div className="w-6/12 lg:w-4/12 py-5 lg:p-5">
               <a href="#" className="block">
                 <img
-                  className="hidden w-full h-full lg:block"
+                  className="hidden w-full h-auto lg:block"
                   src={headerLogo}
-                  alt="HUPR logo"
+                  alt="PIEACH logo"
                 />
                 <img
-                  className="block w-full h-full lg:hidden"
+                  className="block w-full h-auto lg:hidden"
                   src={mobileLogo}
-                  alt="HUPR logo"
+                  alt="PIEACH logo"
                 />
               </a>
             </div>
@@ -103,13 +103,13 @@ export function Header({
                 <div className="my-2 border-t border-[#323234]" />
                 <div className="flex justify-between gap-3 pt-10">
                   <a
-                    href="https://www.linkedin.com/company/centre-hupr/"
+                    href="https://www.linkedin.com/company/centre-PIEACH/"
                     target="_blank"
                     rel="noreferrer"
                   >
                     LinkedIn
                   </a>
-                  <a href="https://hupr.ca/">Francais</a>
+                  <a href="https://PIEACH.ca/">Francais</a>
                 </div>
               </div>
             </div>

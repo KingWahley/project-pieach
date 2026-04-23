@@ -4,15 +4,15 @@
 @import "tailwindcss";
 
 :root {
-  --hupr-black: #323234;
-  --hupr-light: #e8e8e8;
-  --hupr-ultra-light: #f4f4f4;
-  --hupr-overlay: rgba(28, 28, 28, 0.48);
-  --hupr-cream: #fffdf9;
+  --PIEACH-black: #323234;
+  --PIEACH-light: #e8e8e8;
+  --PIEACH-ultra-light: #f4f4f4;
+  --PIEACH-overlay: rgba(28, 28, 28, 0.48);
+  --PIEACH-cream: #fffdf9;
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
   overflow-x: hidden;
 }
 
@@ -20,7 +20,7 @@ body {
   margin: 0;
   overflow-x: hidden;
   background: #fff;
-  color: var(--hupr-black);
+  color: var(--PIEACH-black);
   font-family: "IBM Plex Mono", monospace;
 }
 
@@ -50,24 +50,24 @@ img {
   font-family: "IBM Plex Mono", monospace;
 }
 
-.bg-black-hupr {
-  background-color: var(--hupr-black);
+.bg-black-PIEACH {
+  background-color: var(--PIEACH-black);
 }
 
-.text-black-hupr {
-  color: var(--hupr-black);
+.text-black-PIEACH {
+  color: var(--PIEACH-black);
 }
 
 .bg-lightGray {
-  background-color: var(--hupr-light);
+  background-color: var(--PIEACH-light);
 }
 
 .bg-ultraLightGray {
-  background-color: var(--hupr-ultra-light);
+  background-color: var(--PIEACH-ultra-light);
 }
 
 .bg-overlay {
-  background-color: var(--hupr-overlay);
+  background-color: var(--PIEACH-overlay);
 }
 
 .page-shell {
@@ -80,7 +80,7 @@ img {
   z-index: 100;
   display: grid;
   place-items: center;
-  background: var(--hupr-black);
+  background: var(--PIEACH-black);
   transition: opacity 0.8s ease, visibility 0.8s ease;
 }
 
@@ -96,7 +96,7 @@ img {
   border-radius: 9999px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-top-color: white;
-  animation: hupr-spin 1.2s linear infinite;
+  animation: PIEACH-spin 1.2s linear infinite;
 }
 
 .hero-column {
@@ -134,7 +134,7 @@ img {
 .marquee {
   display: flex;
   width: max-content;
-  animation: hupr-marquee 25s linear infinite;
+  animation: PIEACH-marquee 25s linear infinite;
 }
 
 .title-el {
@@ -156,7 +156,7 @@ img {
 
 .section-rule {
   border: 0;
-  border-top: 1px solid var(--hupr-black);
+  border-top: 1px solid var(--PIEACH-black);
 }
 
 .anim-btn {
@@ -234,7 +234,7 @@ img {
   bottom: -0.35rem;
   width: 0;
   height: 1px;
-  background: var(--hupr-black);
+  background: var(--PIEACH-black);
   transition: width 0.3s ease;
 }
 
@@ -287,12 +287,12 @@ img {
   width: 100%;
   border: 0;
   padding: 0.95rem 1rem;
-  background: var(--hupr-ultra-light);
-  color: var(--hupr-black);
+  background: var(--PIEACH-ultra-light);
+  color: var(--PIEACH-black);
 }
 
 .modal-card input:focus {
-  outline: 1px solid var(--hupr-black);
+  outline: 1px solid var(--PIEACH-black);
 }
 
 .marquee:hover {
@@ -303,13 +303,13 @@ img {
   backdrop-filter: blur(6px);
 }
 
-@keyframes hupr-spin {
+@keyframes PIEACH-spin {
   to {
     transform: rotate(360deg);
   }
 }
 
-@keyframes hupr-marquee {
+@keyframes PIEACH-marquee {
   0% {
     transform: translateX(0);
   }
@@ -339,4 +339,14 @@ img {
   .innovation-title::after {
     display: none;
   }
+}
+
+@keyframes pan-blueprint {
+  from { background-position: 0px 0px; }
+  to { background-position: 800px 800px; }
+}
+
+.animate-pan-blueprint {
+  animation: pan-blueprint 30s linear infinite;
+  background-size: 800px;
 }

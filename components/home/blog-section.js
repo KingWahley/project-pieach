@@ -1,6 +1,6 @@
 import { AnimatedButton } from "./ui";
 
-export function NewsSection({ news }) {
+export function BlogSection({ news }) {
   return (
     <section className="py-20">
       <div className="w-full px-5 py-8 xl:p-8">
@@ -38,7 +38,7 @@ export function NewsSection({ news }) {
                     <a href={item.href} target="_blank" rel="noreferrer">
                       <button
                         type="button"
-                        className="anim-btn rounded-md bg-black-hupr px-4 py-2 text-xs uppercase text-white xl:text-lg"
+                        className="anim-btn rounded-md bg-black-PIEACH px-4 py-2 text-xs uppercase text-white xl:text-lg"
                       >
                         <AnimatedButton label="Read more" />
                       </button>

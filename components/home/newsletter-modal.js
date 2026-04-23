@@ -46,14 +46,14 @@ export function NewsletterModal({ isOpen, onClose }) {
               <input className="mt-1 w-auto" type="checkbox" />
               <span>
                 By clicking on &quot;Subscribe&quot;, you agree to receive email
-                updates from HUPR. You can unsubscribe at any time via the link in
+                updates from PIEACH. You can unsubscribe at any time via the link in
                 our emails. See our privacy policy.
               </span>
             </label>
 
             <button
               type="submit"
-              className="rounded-md bg-black-hupr px-4 py-3 text-xs uppercase text-white"
+              className="rounded-md bg-black-PIEACH px-4 py-3 text-xs uppercase text-white"
             >
               Subscribe
             </button>

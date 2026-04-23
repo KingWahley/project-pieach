@@ -76,12 +76,12 @@ export function AboutSection() {
         <div className="w-full pt-20 lg:w-7/12 lg:pt-0 xl:w-8/12 2xl:w-9/12">
           <h3 className="ibm-mono reveal-on-scroll uppercase text-sm">About us</h3>
           <hr className="section-rule my-2" />
-          <h1 className=" reveal-on-scroll py-5 pr-5 text-lg leading-none  ">
+          <h1 className=" reveal-on-scroll py-5 pr-5 text-base leading-relaxed xl:text-lg  ">
             <span>Pieach Limited was established in 1997. We are a 15-person firm of architects, planners, interior designers, and project managers with an industry-leading reputation in Nigeria and the West African sub region Our award-winning practice provides a wide range of services, from full service architectural and interior design for the project planning, restorations, renovations, and additions.</span>
           </h1>
           <div className="py-4">
             <a
-              href="https://hupr.ca/en/about/"
+              href="https://PIEACH.ca/en/about/"
               target="_blank"
               rel="noreferrer"
               className="btn-square relative inline-block aspect-square h-[124px] w-[124px] cursor-pointer border border-black p-4"

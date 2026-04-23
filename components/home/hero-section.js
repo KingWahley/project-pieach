@@ -3,36 +3,12 @@ import { AnimatedButton } from "./ui";
 export function HeroSection({ heroImages, activeHero, repeatedMarquee }) {
   return (
     <section className="relative min-h-screen w-full">
-      <div className="grid h-screen overflow-hidden xl:h-[170vh] xl:grid-cols-3">
-        {heroImages.map((image, index) => (
-          <div key={image} className="hero-column relative hidden xl:block">
-            {heroImages.map((variant, variantIndex) => (
-              <img
-                key={`${image}-${variant}`}
-                src={variant}
-                alt=""
-                aria-hidden="true"
-                className={`hero-image ${
-                  (activeHero + index) % heroImages.length === variantIndex
-                    ? "is-active"
-                    : ""
-                }`}
-              />
-            ))}
-          </div>
-        ))}
-
-        <div className="hero-column relative xl:hidden">
-          {heroImages.map((image, index) => (
-            <img
-              key={image}
-              src={image}
-              alt=""
-              aria-hidden="true"
-              className={`hero-image ${activeHero === index ? "is-active" : ""}`}
-            />
-          ))}
-        </div>
+      <div className="h-screen w-full overflow-hidden xl:h-[170vh]">
+        <img
+          src={heroImages[0]}
+          alt="Hero background"
+          className="h-full w-full object-cover"
+        />
       </div>
 
       <div className="absolute top-[75vh] z-10 overflow-hidden whitespace-nowrap lg:top-[80vh] xl:top-[65vh]">
@@ -59,14 +35,14 @@ export function HeroSection({ heroImages, activeHero, repeatedMarquee }) {
             </h2>
             <hr className="section-rule mt-2 mb-8" />
             <p className="reveal-on-scroll text-base leading-relaxed xl:text-xl">
-              HUPR supports the community through applied research, knowledge
+              PIEACH supports the community through applied research, knowledge
               transfer, consulting services and technical support.
             </p>
             <div className="reveal-on-scroll pt-8">
               <a href="#services">
                 <button
                   type="button"
-                  className="anim-btn rounded-md bg-black-hupr px-4 py-2 text-xs uppercase text-white xl:text-lg"
+                  className="anim-btn rounded-md bg-black-PIEACH px-4 py-2 text-xs uppercase text-white xl:text-lg"
                 >
                   <AnimatedButton label="learn more" />
                 </button>

@@ -36,7 +36,7 @@ export const innovations = [
     title: "Education",
     image: "/assets/innovation-technologies.jpg",
     description:
-      "At HUPR, we see digital technologies as key enablers for the emergence of innovative ideas. We are committed to democratizing their use for creation, education, and forward-thinking innovation, prioritizing ethical, inclusive, and accessible approaches. Recognized as a Technology Access Center, we integrate motion capture, artificial intelligence, and machine learning to tackle challenges in the performing arts sector.",
+      "At PIEACH, we see digital technologies as key enablers for the emergence of innovative ideas. We are committed to democratizing their use for creation, education, and forward-thinking innovation, prioritizing ethical, inclusive, and accessible approaches. Recognized as a Technology Access Center, we integrate motion capture, artificial intelligence, and machine learning to tackle challenges in the performing arts sector.",
   },
   {
     title: "Multiplexes",
@@ -49,28 +49,28 @@ export const innovations = [
 
 export const news = [
   {
-    title: "HUPR is now on LinkedIn!",
-    date: "November 2024",
-    image: "/assets/news-linkedin.jpg",
-    href: "https://www.linkedin.com/company/centre-hupr",
+    title: "The Rise of Sustainable Architecture",
+    date: "April 2024",
+    image: "https://images.unsplash.com/photo-1518780664697-55e3ad937233?q=80&w=1000&auto=format&fit=crop",
+    href: "#",
     description:
-      "HUPR - Research Centre for Human Potential - invites you to follow our updates on LinkedIn. Discover our projects in the performing arts, our bold collaborations, and our advances in transdisciplinary research. Join our network to explore how the performing arts open new pathways for innovation. See you soon on LinkedIn!",
+      "Explore how modern architects are integrating sustainable materials and energy-efficient designs to create buildings that not only look spectacular but also minimize environmental impact. From green roofs to passive solar heating, sustainability is reshaping our urban landscapes.",
   },
   {
-    title: "CRITAC Becomes HUPR: Research Centre for Human Potential",
-    date: "November 2024",
-    image: "/assets/news-rebrand.jpg",
-    href: "https://ecolenationaledecirque.ca/en/hupr-when-art-entertains-science/",
+    title: "Minimalism in Modern Residential Design",
+    date: "March 2024",
+    image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=1000&auto=format&fit=crop",
+    href: "#",
     description:
-      "This new identity reflects an expanded mission dedicated to exploring human potential. Rooted in circus arts, the Centre's transdisciplinary research extends to all performing arts, fostering increasingly innovative and bold collaborations. Patrice Aubertin, Director of HUPR, shares the vision and collective effort behind this transformation. Discover the journey that led CRITAC to become HUPR.",
+      "Minimalist architecture continues to dominate residential design, emphasizing clean lines, open spaces, and natural light. Discover the principles behind this enduring trend and how it fosters a sense of tranquility and order in the modern home.",
   },
   {
-    title: "HUPR Centre Recognized as a Technology Access Centre",
-    date: "August 2024",
-    image: "/assets/news-tech-centre.jpg",
-    href: "https://ecolenationaledecirque.ca/en/hupr-recognized-as-a-technology-access-centre/",
+    title: "Urban Revival: Transforming Industrial Spaces",
+    date: "February 2024",
+    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1000&auto=format&fit=crop",
+    href: "#",
     description:
-      "The HUPR Centre, affiliated with the National Circus School, has recently been recognized as a Technology Access Centre by NSERC. This distinction comes with a grant aimed at supporting the development of digital technologies, further strengthening its capabilities in research, training, and consulting services. This initiative enables the HUPR Centre to provide cutting-edge support for innovation and the evolution of practices in the performing arts sector.",
+      "Adaptive reuse is breathing new life into forgotten industrial areas. We take a look at some of the most innovative projects that have successfully transformed old factories and warehouses into vibrant cultural hubs, luxury lofts, and modern workspaces.",
   },
 ];
 
@@ -103,9 +103,9 @@ export const navItems = [
 export const assets = {
   arrowIcon: "/assets/icon-arrow.svg",
   sphereArrow: "/assets/icon-sphere-arrow.svg",
-  footerLogo: "/assets/logo-footer.svg",
+  footerLogo: "/assets/Pieach Logo PNG.png",
   encLogo: "/assets/logo-enc.png",
-  headerLogo: "/assets/logo-header.svg",
-  mobileLogo: "/assets/logo-mobile.svg",
+  headerLogo: "/assets/Pieach Logo PNG.png",
+  mobileLogo: "/assets/Pieach Logo PNG.png",
   lottieUrl: "/assets/footer-lottie.json",
 };

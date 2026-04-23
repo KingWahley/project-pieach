@@ -1,21 +1,25 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import Lenis from "lenis";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 import { AboutSection } from "./home/about-section";
 import { heroImages, stats, innovations, news, usefulLinks, navItems, assets } from "./home/data";
 import { Footer } from "./home/footer";
 import { Header } from "./home/header";
 import { HeroSection } from "./home/hero-section";
 import { InnovationSection } from "./home/innovation-section";
-import { NewsSection } from "./home/news-section";
+import { BlogSection } from "./home/blog-section";
 import { NewsletterModal } from "./home/newsletter-modal";
 import { ServicesSection } from "./home/services-section";
+import { CtaSection } from "./home/cta-section";
 
 export default function HomePage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-  const [activeHero, setActiveHero] = useState(0);
+
   const [footerAnimation, setFooterAnimation] = useState(null);
 
   const repeatedMarquee = useMemo(() => Array.from({ length: 3 }), []);
@@ -26,14 +30,33 @@ export default function HomePage() {
   }, []);
 
   useEffect(() => {
-    const heroTimer = window.setInterval(() => {
-      setActiveHero((value) => (value + 1) % heroImages.length);
-    }, 4200);
+    gsap.registerPlugin(ScrollTrigger);
+    
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), 
+      direction: 'vertical', 
+      gestureDirection: 'vertical',
+      smooth: true,
+      smoothTouch: false,
+      touchMultiplier: 2,
+    });
+
+    lenis.on("scroll", ScrollTrigger.update);
+
+    gsap.ticker.add((time) => {
+      lenis.raf(time * 1000);
+    });
+
+    gsap.ticker.lagSmoothing(0);
 
     return () => {
-      window.clearInterval(heroTimer);
+      lenis.destroy();
+      gsap.ticker.remove(lenis.raf);
     };
   }, []);
+
+
 
   useEffect(() => {
     if (isMenuOpen || isModalOpen) {
@@ -90,13 +113,13 @@ export default function HomePage() {
       <main>
         <HeroSection
           heroImages={heroImages}
-          activeHero={activeHero}
           repeatedMarquee={repeatedMarquee}
         />
         <AboutSection />
         <ServicesSection />
         <InnovationSection />
-        <NewsSection news={news} />
+        <BlogSection news={news} />
+        <CtaSection />
       </main>
 
       <Footer
