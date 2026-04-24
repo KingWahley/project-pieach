@@ -104,25 +104,7 @@ export const clients = [
   },
 ];
 
-export const usefulLinks = [
-  {
-    label: "Publications",
-    href: "https://ecolenationaledecirque.ca/en/research-centre/publications/",
-  },
-  {
-    label: "Institutional research policies",
-    href: "https://ecolenationaledecirque.ca/en/institutional-research-policies/",
-  },
-  {
-    label: "Research Ethics Board",
-    href: "https://ecolenationaledecirque.ca/en/research-centre/research-ethics-board/",
-  },
-  {
-    label: "Circus: Arts, Life and Sciences (CALS)",
-    href: "https://journals.publishing.umich.edu/circus/",
-    className: "italic",
-  },
-];
+
 
 export const navItems = [
   { label: "Home", href: "#" },

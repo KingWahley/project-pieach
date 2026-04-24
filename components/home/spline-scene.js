@@ -79,8 +79,43 @@ export function SplineScene() {
   }
 
   return (
-    <SplineErrorBoundary fallback={<HeroFallback />}>
-      <Spline scene={SCENE_URL} renderOnDemand />
-    </SplineErrorBoundary>
+    <>
+      <div className="spline-surface-motion">
+        <SplineErrorBoundary fallback={<HeroFallback />}>
+          <Spline scene={SCENE_URL} renderOnDemand={false} />
+        </SplineErrorBoundary>
+      </div>
+
+      <style jsx>{`
+        .spline-surface-motion {
+          position: relative;
+          overflow: hidden;
+          height: 100%;
+          width: 100%;
+        }
+
+        .spline-surface-motion :global(canvas) {
+          height: 100% !important;
+          width: 100% !important;
+          transform-origin: center center;
+          animation: spline-surface-rotation 16s ease-in-out infinite alternate;
+          will-change: transform;
+        }
+
+        @keyframes spline-surface-rotation {
+          0% {
+            transform: scale(1.03) rotate(0deg) translate3d(0, 0, 0);
+          }
+
+          50% {
+            transform: scale(1.045) rotate(1deg) translate3d(0.8%, -0.9%, 0);
+          }
+
+          100% {
+            transform: scale(1.03) rotate(-0.85deg) translate3d(-0.65%, 0.55%, 0);
+          }
+        }
+      `}</style>
+    </>
   );
 }

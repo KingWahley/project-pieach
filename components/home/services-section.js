@@ -9,14 +9,14 @@ import { SectionLabel } from "./ui";
 const SERVICES = [
   {
     title: "Strategic Planning",
-    color: "#a69385",
+    color: "#d5a73f",
     image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1920&auto=format&fit=crop",
     description:
       "We orchestrate the harmonious integration of form, function, and environment. Our master planning anticipates future urban dynamics, ensuring resilient and visionary frameworks.",
   },
   {
     title: "Architecture",
-    color: "#a64b52",
+    color: "#32171b",
     image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1920&auto=format&fit=crop",
     description:
       "Our structural philosophy marries avant-garde aesthetics with absolute structural integrity, producing iconic monuments that dictate the skyline and inspire their inhabitants.",
@@ -61,7 +61,7 @@ export function ServicesSection() {
   }, []);
 
   return (
-    <section id="services" className="px-0 py-0" ref={sectionRef}>
+    <section id="services" className="px-0 py-0 text-white" ref={sectionRef}>
       <div className="sr-stack">
         <div className="sr-label">
           <SectionLabel>OUR SERVICES</SectionLabel>
