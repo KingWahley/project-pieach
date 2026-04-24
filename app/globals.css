@@ -6,6 +6,9 @@
   --PIEACH-ultra-light: #f4f4f4;
   --PIEACH-overlay: rgba(28, 28, 28, 0.48);
   --PIEACH-cream: #fffdf9;
+  --PIEACH-brand-font: Verdana, Geneva, sans-serif;
+  --PIEACH-brand-deep: #32171b;
+  --PIEACH-brand-gold: #d5a73f;
 }
 
 html {
@@ -18,7 +21,7 @@ body {
   overflow-x: hidden;
   background: #fff;
   color: var(--PIEACH-black);
-  font-family: var(--font-ibm-plex-mono), monospace;
+  font-family: var(--PIEACH-brand-font);
 }
 
 a {
@@ -36,15 +39,19 @@ img {
 }
 
 .montserrat-font {
-  font-family: var(--font-montserrat), sans-serif;
+  font-family: var(--PIEACH-brand-font);
 }
 
 .moderustic-font {
-  font-family: var(--font-moderustic), sans-serif;
+  font-family: var(--PIEACH-brand-font);
 }
 
 .ibm-mono {
-  font-family: var(--font-ibm-plex-mono), monospace;
+  font-family: var(--PIEACH-brand-font);
+}
+
+.brand-heading {
+  font-family: var(--PIEACH-brand-font);
 }
 
 .bg-black-PIEACH {

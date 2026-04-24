@@ -82,7 +82,7 @@ export function ServicesSection() {
                   
                 </div>
 
-                <h2 className="sr-title">{service.title}</h2>
+                <h2 className="text-6xl uppercase font-bold">{service.title}</h2>
 
                 <p className="sr-body">{service.description}</p>
               </div>

@@ -23,6 +23,26 @@ export const stats = [
   },
 ];
 
+export const aboutParagraphs = [
+  "Pieach's goal is to create flexible, useful and meaningful environments that respond to our client's requirements and enhance the context in which a building is located. Our profound appreciation of traditional vernacular Architecture brings a quality of timelessness to our buildings; from the overall scope to crafting the finest details.",
+  "Pieach Limited was established in 1997. We are a 15-person firm of architects, planners, interior designers, and project managers with an industry leading reputation in Nigeria and the West African sub region.",
+  "Our award-winning practice provides a wide range of services, from full service architectural and interior design to project planning, restorations, renovations, and additions.",
+  "Our works include corporate, commercial, hospitality and lifestyle, educational, multi and single family residential projects for some of the largest and most reputable business and private entities within the region.",
+  "We treat every project as a work of art, while at the same time keeping in tune with the client's functional and personal wishes. We believe in creating an active, collaborative partnership with our clients to achieve the best possible results.",
+];
+
+export const aboutBrandInfo = {
+  logo: "/assets/Pieach Logo PNG.png",
+  typography: "Verdana",
+  colors: ["#32171B", "#D5A73F"],
+  showcaseImages: [
+    "/assets/hero-1.jpg",
+    "/assets/hero-2.jpg",
+    "/assets/hero-3.jpg",
+    "/assets/innovation-design.jpg",
+  ],
+};
+
 export const recentProjectss = [
   {
     title: "Luxury Residential",
