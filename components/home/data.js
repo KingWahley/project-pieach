@@ -45,26 +45,50 @@ export const aboutBrandInfo = {
 
 export const recentProjectss = [
   {
-    title: "Luxury Residential",
+    id: 1,
+    title: "West Foster Apartments",
     image:
-      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=1920&auto=format&fit=crop",
+      "https://pieach.com/wp-content/uploads/2022/10/PHOTO-2022-06-27-12-24-28-1024x683.jpg",
+    location: "Ikoyi, Lagos, Nigeria",
     description:
-      "We design bespoke living spaces that harmonize with their natural surroundings. Our residential portfolio is defined by meticulous craftsmanship, expansive natural light, and an uncompromising dedication to material excellence, creating sanctuaries of profound tranquility and modern elegance.",
+      "West Foster Apartments is a nine-story building located in one of the quietest parts of Ikoyi, Lagos. The building mixes traditional architecture with contemporary comforts and offers 20 units in different layouts.",
   },
   {
-    title: "Cultural & Civic",
+    id: 2,
+    title: "Church of Transfiguration",
     image:
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1920&auto=format&fit=crop",
+      "https://pieach.com/wp-content/uploads/2023/10/PJX189-3.jpg",
+    location: "V.G.C. Lagos, Nigeria",
     description:
-      "Our civic architecture shapes the cultural fabric of modern cities. We create monumental, sustainable public spaces that foster human connection, inspire awe, and stand as timeless testaments to the communities they serve.",
+      "The Church of Transfiguration is a vision of a sustainable and welcoming place of worship for the Catholic community in Victoria Garden City, Lagos. ",
   },
   {
-    title: "Commercial Towers",
+    id: 3,
+    title: "Adunola House",
     image:
-      "https://images.unsplash.com/photo-1430285561322-780c60461536?q=80&w=1920&auto=format&fit=crop",
+      "https://pieach.com/wp-content/uploads/2022/09/2116-1-scaled-e1698914025548.jpg",
+    location: "Banana Island, Lagos State, Nigeria",
     description:
-      "Redefining the modern skyline, our commercial structures blend sculptural aesthetics with high-performance engineering. We design dynamic, adaptable workspaces that prioritize ecological sustainability and elevate the corporate human experience.",
+      "This 10-storey, 2-basement multipurpose office building is located in Banana Island, arguably the most prestigious place to live and work in Lagos. ",
   },
+  {
+    id: 4,
+    title: "Falomo Shopping Centre",
+    image:
+      "https://pieach.com/wp-content/uploads/2023/11/PJ13107_3-scaled.jpg",
+    location: "Ikoyi, Lagos State",
+    description:
+      "he Falomo Shopping Center is a proposed mixed-use development that would transform the Falomo Roundabout into a vibrant and active center of activity.",
+  },
+  {
+    id: 5,
+    title: "Webb Road Mansion",
+    image:
+      "https://pieach.com/wp-content/uploads/2023/11/PJ8103_8.jpg",
+    location: "Ikoyi, Lagos State, Nigeria",
+    description:
+      "WEBB ROAD is a twin ultra-modern residential development located in Webb Road, Ikoyi. The development features five floors with 3 and 4 bedroom apartments, maisonettes, penthouses, and private terraces. ",
+  }
 ];
 
 export const blog = [

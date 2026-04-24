@@ -6,7 +6,7 @@ import { CtaSection } from "./home/cta-section";
 import { Footer } from "./home/footer";
 import { Header } from "./home/header";
 import { HeroSection } from "./home/hero-section";
-import { recentProjectsSection } from "./home/recentProjects-section";
+import { RecentProjectsSection } from "./home/recentProjects-section";
 import { RevealObserver } from "./home/reveal-observer";
 import { ServicesSection } from "./home/services-section";
 import { SmoothScroll } from "./home/smooth-scroll";
@@ -32,7 +32,7 @@ export default function HomePage() {
         />
         <AboutSection />
         <ServicesSection />
-        <recentProjectsSection />
+         <RecentProjectsSection />
         <ClientsSection />
         <BlogSection blog={blog} />
         <CtaSection />

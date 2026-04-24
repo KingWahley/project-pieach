@@ -13,7 +13,7 @@ export function BlogSection({ blog }) {
           <article key={item.title} className="w-full py-4">
             <hr className="section-rule my-2" />
             <div className="gap-10 py-4 lg:flex">
-              <div className="w-full lg:w-6/12 xl:w-3/12">
+              <div className="w-full lg:w-6/12 xl:w-3/12 reveal-on-scroll">
                 <div className="relative overflow-hidden aspect-[calc(4/2.8)]">
                   <Image
                     className="h-full w-full object-cover object-top transition-transform duration-700 hover:scale-105"
