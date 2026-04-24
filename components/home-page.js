@@ -26,7 +26,7 @@ export default function HomePage() {
 
       <main>
         <HeroSection
-          heroImages={heroImages}
+          heroImages={"https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=1920&auto=format&fit=crop"}
           repeatedMarquee={[0, 1, 2]}
           splineBackground={<SplineScene />}
         />
