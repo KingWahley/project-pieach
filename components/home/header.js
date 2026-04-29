@@ -95,7 +95,7 @@ export function Header({ navItems, headerLogo }) {
             onClick={(event) => event.stopPropagation()}
           >
             <div className="flex h-full w-full flex-col px-5 pb-5 pt-32 xl:pt-20">
-              <ul className="montserrat-font w-full text-right text-[40px] font-bold uppercase leading-[60px] lg:text-[80px] lg:leading-[110px] xl:text-3xl">
+              <ul className="montserrat-font w-full text-right text-2xl font-bold uppercase leading-relaxed lg:text-5xl lg:leading-tight">
                 {navItems.map((item) => (
                   <li key={item.label} className="anim-btn">
                     <a href={item.href} onClick={onCloseMenu}>

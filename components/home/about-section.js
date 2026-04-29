@@ -118,7 +118,7 @@ export function AboutSection() {
               <h3
                 key={`value-${activeStat}`}
                 ref={valueRef}
-                className="text-5xl font-bold 3xl:text-6xl"
+                className="text-4xl font-bold md:text-5xl 3xl:text-6xl"
               >
                 {displayValue}
               </h3>

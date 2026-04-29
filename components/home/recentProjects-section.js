@@ -15,7 +15,7 @@ export function RecentProjectsSection() {
   }));
 
   return (
-    <section className="flex flex-col bg-ultraLightGray xl:min-h-[calc(100vh+5rem)]">
+    <section className="flex flex-col bg-ultraLightGray min-h-screen py-20 overflow-hidden">
       <StickySectionLabel
         className="w-full mb-10 px-5 pt-20 xl:px-8 xl:pt-8"
         pinClassName="z-20 bg-ultraLightGray pt-2"
@@ -28,7 +28,7 @@ export function RecentProjectsSection() {
           items={focusRailItems}
           autoPlay={false}
           loop={true}
-          className="h-[700px]"
+          className="h-full"
         />
       </div>
     </section>

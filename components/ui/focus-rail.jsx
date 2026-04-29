@@ -46,7 +46,17 @@ export function FocusRail({
 }) {
   const [active, setActive] = React.useState(initialIndex);
   const [isHovering, setIsHovering] = React.useState(false);
+  const [windowWidth, setWindowWidth] = React.useState(0);
   const lastWheelTime = React.useRef(0);
+
+  React.useEffect(() => {
+    setWindowWidth(window.innerWidth);
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const isMobile = windowWidth > 0 && windowWidth < 768;
 
   const count = items.length;
   const activeIndex = wrap(0, count, active);
@@ -121,14 +131,13 @@ export function FocusRail({
   return (
     <div
       className={cn(
-        "group relative flex h-[600px] w-full flex-col overflow-hidden bg-transparent text-black outline-none select-none overflow-x-hidden",
+        "group relative flex min-h-[600px] md:min-h-[900px] w-full flex-col overflow-hidden bg-transparent text-black outline-none select-none overflow-x-hidden",
         className
       )}
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
       tabIndex={0}
       onKeyDown={onKeyDown}
-      onWheel={onWheel}
     >
       {/* Background Ambience */}
       <div className="absolute inset-0 z-0 pointer-events-none">
@@ -155,7 +164,7 @@ export function FocusRail({
       <div className="relative z-10 flex flex-1 flex-col justify-center px-4 md:px-8">
         {/* DRAGGABLE RAIL CONTAINER */}
         <motion.div
-          className="relative mx-auto flex h-[360px] w-full max-w-6xl items-center justify-center perspective-[1200px] cursor-grab active:cursor-grabbing"
+          className="relative mx-auto flex h-[500px] md:h-[750px] w-full max-w-[1800px] items-center justify-center perspective-[1200px] cursor-grab active:cursor-grabbing"
           drag="x"
           dragConstraints={{ left: 0, right: 0 }}
           dragElastic={0.2}
@@ -172,10 +181,11 @@ export function FocusRail({
             const dist = Math.abs(offset);
 
             // Dynamic transforms
-            const xOffset = offset * 320;
-            const zOffset = -dist * 180;
-            const scale = isCenter ? 1 : 0.85;
-            const rotateY = offset * -20;
+            const xMultiplier = isMobile ? 360 : 950;
+            const xOffset = offset * xMultiplier;
+            const zOffset = -dist * (isMobile ? 180 : 350);
+            const scale = isCenter ? 1 : (isMobile ? 0.75 : 0.8);
+            const rotateY = offset * (isMobile ? -12 : -25);
 
             const opacity = isCenter ? 1 : Math.max(0.1, 1 - dist * 0.5);
             const blur = isCenter ? 0 : dist * 6;
@@ -185,7 +195,7 @@ export function FocusRail({
               <motion.div
                 key={absIndex}
                 className={cn(
-                  "absolute aspect-[3/4] w-[260px] md:w-[300px] rounded-2xl border-t border-black/5 bg-white shadow-2xl transition-shadow duration-300",
+                  "absolute aspect-[16/10] w-[340px] md:w-[850px] rounded-2xl border-t border-black/5 bg-white shadow-2xl transition-shadow duration-300",
                   isCenter ? "z-20 shadow-black/10" : "z-10"
                 )}
                 initial={false}
@@ -215,6 +225,24 @@ export function FocusRail({
                   className="h-full w-full rounded-2xl object-cover pointer-events-none"
                 />
 
+                {/* Text Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-4 md:p-8 rounded-2xl text-white">
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.2, duration: 0.5 }}
+                  >
+                    {item.meta && (
+                      <span className="text-xs font-medium uppercase tracking-[0.2em] text-white/70 mb-2 block">
+                        {item.meta}
+                      </span>
+                    )}
+                    <h3 className="text-2xl md:text-4xl font-bold tracking-tight leading-tight">
+                      {item.title}
+                    </h3>
+                  </motion.div>
+                </div>
+
                 {/* Lighting layers */}
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-black/5 to-transparent pointer-events-none" />
                 <div className="absolute inset-0 rounded-2xl bg-white/10 pointer-events-none mix-blend-overlay" />
@@ -223,36 +251,9 @@ export function FocusRail({
           })}
         </motion.div>
 
-        {/* Info & Controls */}
-        <div className="mx-auto mt-12 flex w-full max-w-4xl flex-col items-center justify-between gap-6 md:flex-row pointer-events-auto">
-          <div className="flex flex-1 flex-col items-center text-center md:items-start md:text-left h-32 justify-center">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={activeItem.id}
-                initial={{ opacity: 0, y: 10, filter: "blur(4px)" }}
-                animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                exit={{ opacity: 0, y: -10, filter: "blur(4px)" }}
-                transition={{ duration: 0.3 }}
-                className="space-y-2"
-              >
-                {activeItem.meta && (
-                  <span className="text-xs font-medium uppercase tracking-wider text-emerald-600">
-                    {activeItem.meta}
-                  </span>
-                )}
-                <h2 className="text-3xl font-bold tracking-tight md:text-4xl text-black">
-                  {activeItem.title}
-                </h2>
-                {activeItem.description && (
-                  <p className="max-w-md text-neutral-600">
-                    {activeItem.description}
-                  </p>
-                )}
-              </motion.div>
-            </AnimatePresence>
-          </div>
-
-          <div className="flex items-center gap-4">
+        {/* Controls Only */}
+        <div className="mx-auto mt-12 md:mt-20 flex w-full max-w-4xl items-center justify-center pointer-events-auto">
+          <div className="flex items-center gap-6">
             <div className="flex items-center gap-1 rounded-full bg-white/80 p-1 ring-1 ring-black/5 backdrop-blur-md">
               <button
                 onClick={handlePrev}

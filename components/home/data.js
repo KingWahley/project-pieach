@@ -152,7 +152,11 @@ export const clients = [
 
 export const navItems = [
   { label: "Home", href: "#" },
-  { label: "About us", href: "#about" },
+  { label: "About", href: "#about" },
+  { label: "Services", href: "#services" },
+  { label: "Projects", href: "#projects" },
+  { label: "Careers", href: "#careers" },
+  { label: "Blog", href: "#blog" },
   { label: "Contact", href: "#contact" },
 ];
 

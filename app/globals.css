@@ -47,7 +47,7 @@ img {
 }
 
 .ibm-mono {
-  font-family: var(--PIEACH-brand-font);
+  font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 .brand-heading {
@@ -163,9 +163,12 @@ img {
 }
 
 .anim-btn {
-  transition:
-    transform 0.3s ease,
-    opacity 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.anim-btn:hover,
+.anim-btn:focus-visible {
+  color: var(--PIEACH-brand-gold) !important;
 }
 
 .anim-btn:hover .anim-btn-top,
@@ -342,4 +345,13 @@ img {
 .animate-pan-blueprint {
   animation: pan-blueprint 30s linear infinite;
   background-size: 800px;
+}
+
+.footer-nav-link {
+  transition: color 0.3s ease;
+}
+
+.footer-nav-link:hover {
+  color: var(--PIEACH-brand-gold) !important;
+  opacity: 1 !important;
 }

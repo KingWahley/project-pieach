@@ -63,7 +63,7 @@ export function ServicesSection() {
   return (
     <section id="services" className="px-0 py-0 text-white" ref={sectionRef}>
       <div className="sr-stack">
-        <div className="sr-label">
+        <div className="sr-label mb-10 py-10">
           <SectionLabel>OUR SERVICES</SectionLabel>
         </div>
 
@@ -78,11 +78,9 @@ export function ServicesSection() {
           >
             <div className="sr-grid">
               <div className="sr-copy">
-                <div className="sr-meta">
-                  
-                </div>
+               
 
-                <h2 className="text-6xl uppercase font-bold">{service.title}</h2>
+                <h2 className="text-4xl md:text-6xl uppercase font-bold">{service.title}</h2>
 
                 <p className="sr-body">{service.description}</p>
               </div>
@@ -154,11 +152,27 @@ export function ServicesSection() {
 
         .sr-meta {
           display: flex;
-          justify-content: space-between;
-          font-size: 0.7rem;
-          letter-spacing: 0.2em;
+          align-items: center;
+          gap: 1.5rem;
+          margin-bottom: 1.5rem;
+          font-family: "IBM Plex Mono", monospace;
+        }
+
+        .sr-number-label {
+          font-size: 0.65rem;
+          letter-spacing: 0.4em;
           text-transform: uppercase;
-          opacity: 0.7;
+          opacity: 0.4;
+          font-weight: 400;
+        }
+
+        .sr-number {
+          font-size: 2.5rem;
+          font-weight: 500;
+          line-height: 1;
+          color: #d5a73f;
+          opacity: 0.9;
+          letter-spacing: -0.02em;
         }
 
         .sr-title {
